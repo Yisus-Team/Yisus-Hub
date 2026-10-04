@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <title>Yisus Hub</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="#top">
+      <img src="https://i.ibb.co/Ldv7sjQT/IMG-5159.png" alt="Logo">
+      Yisus Hub
+    </a>
+  </nav>
+
+  <main id="top">
+    <header class="page-heading">
+      <h1 class="eyebrow">Yisus Hub · Comunidad</h1>
+    </header>
+
+    <div class="page-layout">
+      <aside class="side-card">
+        <div class="side-title">
+          Desarrolladores <span class="side-count" id="devCount">Cargando…</span>
+        </div>
+        <div class="dev-list" id="devList">
+          <div class="dev-loading">Cargando perfiles de Discord…</div>
+        </div>
+      </aside>
+
+      <div class="center-column">
+        <section class="hub-card" id="script-page">
+          <div class="section-title">Script principal</div>
+          <div class="script-box">
+            <div class="script-head">
+              <span>Script de Yisus Hub</span>
+              <button class="copy-btn" id="copyBtn">Copiar script</button>
+            </div>
+            <pre class="script-code" id="scriptCode">loadstring(game:HttpGet("https://yisus-hub.vercel.app/api/script/loader"))()</pre>
+          </div>
+          <div class="script-note">Haz clic en «Copiar script» para copiar el loader.</div>
+        </section>
+
+        <section class="hub-card games-card" id="games-page">
+          <div class="games-head">
+            <div class="section-title" style="margin:0">Juegos</div>
+            <div class="games-count">1 juego</div>
+          </div>
+          <div class="games-list">
+            <div class="game-item">
+              <div class="game-media">
+                <img
+                  class="game-cover"
+                  src="https://tr.rbxcdn.com/180DAY-e3ec01625d4eb72943a414fbfc6a4f02/256/256/Image/Webp/noFilter"
+                  alt="Portada de Duelos: Asesinos contra sheriffs"
+                >
+                <span class="game-name">Murderers VS Sheriffs</span>
+              </div>
+              <span class="game-status">Actualizado</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="hub-card" id="discord-card">
+          <div class="community-head">
+            <img
+              class="community-icon"
+              src="https://i.ibb.co/Ldv7sjQT/IMG-5159.png"
+              alt="Logotipo de Yisus Hub"
+            >
+            <div>
+              <div class="community-title">Yisus Hub</div>
+              <div class="community-subtitle">Comunidad oficial</div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <a
+            class="invite-btn"
+            href="https://discord.gg/r3kUPsk99A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Unirse al servidor de Discord</a>
+        </section>
+      </div>
+
+      <aside class="side-card">
+        <div class="side-title">
+          Ultimos cambios <span class="side-count">2 actualizaciones</span>
+        </div>
+        <input
+          class="changelog-search"
+          id="changelogSearch"
+          type="search"
+          placeholder="Buscar en el historial de cambios…"
+          aria-label="Buscar en el historial de cambios"
+        >
+        <ul class="changelog-list" id="changelogList">
+          <li class="changelog-item date">20/09/2026</li>
+          <li class="changelog-item">Selector para elegir entre los juegos compatibles con nuestro script.</li>
+          <li class="changelog-item date">29/09/2026</li>
+          <li class="changelog-item">Nueva web</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <div class="toast" id="toast">Script copiado</div>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>
