@@ -1,0 +1,30 @@
+.protection-main{min-height:calc(100vh - 70px);display:grid;place-items:center}
+.protection-nav-label{color:var(--muted);font-size:11px;font-weight:650}
+.protection-card{width:100%;max-width:700px;padding:0;overflow:hidden}
+.protection-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 22px;border-bottom:1px solid var(--border);background:var(--surface2)}
+.protection-head .section-title{margin:0}
+.protection-status{flex:none;padding:5px 9px;border:1px solid var(--border);border-radius:999px;background:#222225;color:#d1d1d4;font-size:10px;font-weight:700;letter-spacing:.4px}
+.protection-body{padding:32px}
+.protection-kicker{margin:0 0 8px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.protection-title{max-width:19ch;margin:0;font-size:clamp(25px,4vw,34px);line-height:1.15;letter-spacing:-1px}
+.protection-desc{max-width:58ch;margin:14px 0 24px;color:var(--muted);font-size:14px;line-height:1.7}
+.protection-flow{display:grid;grid-template-columns:1fr minmax(32px,.5fr) 1fr;align-items:center;gap:12px;padding:16px;background:var(--surface2);border:1px solid var(--border);border-radius:11px}
+.protection-flow-step{display:grid;gap:4px;min-width:0}
+.protection-flow-step span{color:var(--muted);font-size:10px}
+.protection-flow-step strong{overflow-wrap:anywhere;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+.protection-flow-line{height:1px;border-top:1px dashed #55555b}
+.protection-script{margin-top:18px}
+.protection-actions{display:flex;align-items:center;gap:10px;margin-top:22px}
+.protection-actions .invite-btn{width:auto;min-width:160px;padding:0 16px}
+.protection-discord{color:var(--muted);font-size:11px;font-weight:650;padding:10px 12px;border-radius:8px}
+.protection-discord:hover{color:var(--text);background:var(--surface2)}
+.protection-actions a:focus-visible{outline:2px solid #ededee;outline-offset:3px}
+@media(max-width:560px){
+  .protection-main{min-height:calc(100vh - 62px);padding:24px 14px 36px}
+  .protection-head{padding:16px}
+  .protection-body{padding:24px 20px}
+  .protection-flow{grid-template-columns:1fr;gap:10px}
+  .protection-actions{align-items:stretch;flex-direction:column}
+  .protection-actions .invite-btn{width:100%;height:40px}
+  .protection-discord{text-align:center}
+}
