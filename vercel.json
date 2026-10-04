@@ -1,0 +1,18 @@
+{
+  "outputDirectory": "public",
+  "functions": {
+    "api/script.js": {
+      "includeFiles": "private/lua/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/script/:game",
+      "destination": "/api/script?game=$1"
+    },
+    {
+      "source": "/protection",
+      "destination": "/protection.html"
+    }
+  ]
+}
