@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="robots" content="noindex">
+  <title>Acceso protegido · Yisus Hub</title>
+  <link rel="icon" href="https://i.ibb.co/Ldv7sjQT/IMG-5159.png" type="image/png">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/protection.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="/">
+      <img src="https://i.ibb.co/Ldv7sjQT/IMG-5159.png" alt="">
+      Yisus Hub
+    </a>
+    <span class="protection-nav-label">Protección del sitio</span>
+  </nav>
+
+  <main class="protection-main">
+    <article class="hub-card protection-card" aria-labelledby="protection-title">
+      <header class="protection-head">
+        <div>
+          <div class="section-title">Protección del endpoint</div>
+        </div>
+        <span class="protection-status">HTTP 302</span>
+      </header>
+
+      <div class="protection-body">
+        <p class="protection-kicker">Acceso desde navegador</p>
+        <h1 class="protection-title" id="protection-title">Este endpoint no se abre desde una página web.</h1>
+        <p class="protection-desc">
+          La API redirige las visitas normales del navegador a esta página. Si buscabas el loader, puedes copiarlo aquí.
+        </p>
+
+        <div class="protection-flow" aria-label="Respuesta del endpoint: redirección HTTP 302 a /protection">
+          <div class="protection-flow-step">
+            <span>Solicitud</span>
+            <strong>Navegador</strong>
+          </div>
+          <span class="protection-flow-line" aria-hidden="true"></span>
+          <div class="protection-flow-step">
+            <span>Respuesta</span>
+            <strong>302 a /protection</strong>
+          </div>
+        </div>
+
+        <section class="protection-script" aria-label="Script de Yisus Hub">
+          <div class="script-box">
+            <div class="script-head">
+              <span>Script de Yisus Hub</span>
+              <button class="copy-btn" id="copyBtn" type="button">Copiar script</button>
+            </div>
+            <pre class="script-code" id="scriptCode">loadstring(game:HttpGet("https://yisus-hub.vercel.app/api/script/loader"))()</pre>
+          </div>
+        </section>
+
+        <div class="protection-actions">
+          <a class="invite-btn" href="/">Volver al inicio</a>
+          <a class="protection-discord" href="https://discord.gg/r3kUPsk99A" target="_blank" rel="noopener noreferrer">
+            Unirse al Discord
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite">Script copiado</div>
+  <script>
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      const text = document.getElementById('scriptCode').textContent.trim();
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        textarea.remove();
+      }
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 1300);
+    });
+  </script>
+</body>
+</html>
